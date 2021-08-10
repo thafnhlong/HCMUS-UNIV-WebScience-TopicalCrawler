@@ -136,3 +136,12 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# moi truong python
+dev-env
+
+# webdriver
+/Source/webdriver/
+
+# database
+/Source/database/
