@@ -6,9 +6,9 @@
 
 - Cài đặt các package:
 
-```python
-python -m pip install -r requirements.txt
-```
+    ```
+    python -m pip install -r requirements.txt
+    ```
 
 - Tải webdriver giải nén và đưa vào thư mục `webdriver`
 
@@ -20,5 +20,10 @@ python -m pip install -r requirements.txt
 
     - Safari:	https://webkit.org/blog/6900/webdriver-support-in-safari-10/
 
+- File cấu hình môi trường:
+    > /config/env.py
 
-
+- Chạy chương trình:
+    ```
+    python main.py
+    ```
