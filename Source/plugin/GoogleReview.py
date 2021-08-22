@@ -1,0 +1,3 @@
+def init():
+    print("GoogleReview có những chủ đề hot như sau:")
+    # ...

@@ -1,0 +1,3 @@
+def init():
+    print("Foody có những chủ đề hot như sau:")
+    # ...
