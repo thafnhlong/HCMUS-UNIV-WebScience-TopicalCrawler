@@ -1,13 +1,16 @@
 import threading
 import time
+from utils.logfile import create_log
 from utils.signal import AddThread, DoneThread, IsExit
 from model.baiviet import add_bai_viet, get_bai_viet
 
 def init():
     print("ShopeeFood có những chủ đề hot như sau:")
     # get some subject
+    # gọi api hoặc định nghĩa ra sẵn các chủ đề cho người dùng chọn
     mock= ["Đồ ăn", "Đồ uống", "Đồ chay"]
     
+    # tạo menu cho người dùng chọn
     c = 1
     for sub in mock:
         print("%s. %s"%(c,sub))
@@ -25,7 +28,6 @@ def init():
             pass
         if choose is None or choose < 1 or choose > c:
             print("Lựa chọn không hợp lệ, vui long chọn lại: ",end="")
-
         else:
             break
     
@@ -36,8 +38,8 @@ def init():
 
     start()
 
+# khởi tạo luồng mới bắt buộc đặt tên thread, và không trùng
 num = 1
-
 def start():
     global num
     # create thread
@@ -49,32 +51,28 @@ def start():
 
     num += 1
 
-def logger(msg,end="\n"):
-    name = threading.current_thread().name
-    print("[%s]" % name,msg,end=end)
-
+# luồng hoạt động chính
 def process():
+    # tạo logger
+    logger = create_log()
     name = threading.current_thread().name
 
     AddThread(name)
     time.sleep(1)
 
     try: 
-        # bat buoc nam trong block
+        # bat buoc nam trong block try except
 
         # fake:
         # ci=1
         while True:
+            # kiểm tra xem có tín hiệu thoát từ main
             if IsExit():
                 break
             
-            # lấy data
-            # cho vao db
-            # lap lai
-
-            # khong su dung logger de tranh tràn console
-            # chi de test
-            logger("Lấy data...")
+            # lấy data crawler ...
+            logger.write("Lấy data...")
+            # cho vao db ...
 
             # test
             # phai co try, nếu insert trung
@@ -89,11 +87,12 @@ def process():
 
             # sleep for cpu
             time.sleep(3.5)
-
+            
         # test
         # print(get_bai_viet())
     
     except Exception as e:
-        logger("Stop!", str(e))
+        logger.write("Stop! "+str(e))
 
+    logger.close()
     DoneThread(name)

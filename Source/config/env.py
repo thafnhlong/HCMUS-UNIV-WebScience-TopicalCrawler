@@ -7,3 +7,7 @@ if env == "production":
 
 else:
     database_storage = ":memory:"
+    
+python_launcher = "python"
+
+external_log = True
