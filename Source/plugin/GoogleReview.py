@@ -122,4 +122,3 @@ def init():
         print("rate_change", rate_change)
         print("rate_count_change", rate_count_change)
         
-        #field no change: website, url
