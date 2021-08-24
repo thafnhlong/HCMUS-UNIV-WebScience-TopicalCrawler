@@ -62,17 +62,24 @@ def init():
 
         #Get info detail
         title = item.find_element_by_class_name("dbg0pd").find_element_by_tag_name('div').text
+<<<<<<< HEAD
         fullTittle = driver.find_element_by_class_name("SPZz6b").find_element_by_tag_name('h2 span').text
         score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
         address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
         addressDetail = driver.find_element_by_class_name("LrzXr").text
         website = url
+=======
+        score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
+        address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
+        addressDetail = driver.find_element_by_class_name("LrzXr").text
+>>>>>>> 1183ebd (Get info detail)
         phone = ""
         try:
             phone = driver.find_element_by_class_name("kno-fv").find_element_by_tag_name('a span').text
         except NoSuchElementException: 
             pass
         
+<<<<<<< HEAD
         other_service = ""
         try:
             other_service = driver.find_element_by_xpath("//c-wiz[@class='u1M3kd W2lMue']").find_element_by_tag_name('div').text
@@ -103,10 +110,14 @@ def init():
         print("other_service", other_service)
 
 
+=======
+        print("title", title)
+>>>>>>> 1183ebd (Get info detail)
         print("score", score)
         print("address", address)
         print("addressDetail", addressDetail)
         print("phone", phone)
+<<<<<<< HEAD
         print("danhGia", danhGiaGg)
         print("tableActive", tableActive)
 
@@ -122,3 +133,6 @@ def init():
         print("rate_change", rate_change)
         print("rate_count_change", rate_count_change)
         
+=======
+        print('==============')
+>>>>>>> 1183ebd (Get info detail)
