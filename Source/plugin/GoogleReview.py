@@ -2,6 +2,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 
 def init():
     print("GoogleReview có những chủ đề hot như sau:")
@@ -48,3 +50,30 @@ def init():
     # select button Xem Tat ca
     confirm = driver.find_element_by_xpath("//*[text()= 'Xem tất cả']")
     confirm.click()
+
+    #get all item
+    listItem = driver.find_elements_by_class_name("VkpGBb")
+    for item in listItem:
+        #Get link item
+        tag_current = item.find_element_by_tag_name('a')
+        tag_current.click()
+        time.sleep(3)
+        url_page = driver.current_url
+
+        #Get info detail
+        title = item.find_element_by_class_name("dbg0pd").find_element_by_tag_name('div').text
+        score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
+        address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
+        addressDetail = driver.find_element_by_class_name("LrzXr").text
+        phone = ""
+        try:
+            phone = driver.find_element_by_class_name("kno-fv").find_element_by_tag_name('a span').text
+        except NoSuchElementException: 
+            pass
+        
+        print("title", title)
+        print("score", score)
+        print("address", address)
+        print("addressDetail", addressDetail)
+        print("phone", phone)
+        print('==============')
