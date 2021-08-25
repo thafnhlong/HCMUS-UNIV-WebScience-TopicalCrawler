@@ -62,18 +62,64 @@ def init():
 
         #Get info detail
         title = item.find_element_by_class_name("dbg0pd").find_element_by_tag_name('div').text
+        fullTittle = driver.find_element_by_class_name("SPZz6b").find_element_by_tag_name('h2 span').text
         score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
         address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
         addressDetail = driver.find_element_by_class_name("LrzXr").text
+        website = url
         phone = ""
         try:
             phone = driver.find_element_by_class_name("kno-fv").find_element_by_tag_name('a span').text
         except NoSuchElementException: 
             pass
         
+        other_service = ""
+        try:
+            other_service = driver.find_element_by_xpath("//c-wiz[@class='u1M3kd W2lMue']").find_element_by_tag_name('div').text
+        except NoSuchElementException: 
+            pass
+        
+        price = ""
+        try:
+            price = driver.find_element_by_class_name("vk_gy").find_element_by_tag_name('span span').text
+        except NoSuchElementException: 
+            pass
+
+        timeActive = ""
+        tableActive = ""
+        try:
+            active = driver.find_element_by_class_name("JjSWRd")
+            active.click()
+            tableActive = driver.find_element_by_class_name("WgFkxc").text
+        except NoSuchElementException: 
+            pass
+
+        danhGiaGg = driver.find_element_by_class_name("hqzQac").find_element_by_tag_name('span a span').text
+        
+        
         print("title", title)
+        print("fullTittle", fullTittle)
+        print("price", price)
+        print("other_service", other_service)
+
+
         print("score", score)
         print("address", address)
         print("addressDetail", addressDetail)
         print("phone", phone)
+        print("danhGia", danhGiaGg)
+        print("tableActive", tableActive)
+
         print('==============')
+        
+        #Handle info from page
+        #field change: website_id_quan, rate, phone, rate_count, price_from, price_to, other_service, tableActive
+        phone_change = phone.replace(" ", "")
+        rate_change = float(str(score.replace(",", "."))) * 2
+        rate_count_change = danhGiaGg.split(" ")[0]
+
+        print("phone_change", phone_change)
+        print("rate_change", rate_change)
+        print("rate_count_change", rate_count_change)
+        
+        #field no change: website, url
