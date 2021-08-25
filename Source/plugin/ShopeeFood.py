@@ -1,5 +1,6 @@
 import threading
 import time
+from utils.metric import AddMetric
 from utils.logfile import create_log
 from utils.signal import AddThread, DoneThread, IsExit
 from model.baiviet import add_bai_viet, get_bai_viet
@@ -71,8 +72,18 @@ def process():
                 break
             
             # lấy data crawler ...
+            start_time = time.time()
             logger.write("Lấy data...")
+            
+            # lấy data
+            time.sleep(0.1)
+
+            # xử lý data
+            time.sleep(0.3)
+            AddMetric(len("đây là nội dung đã xử lý"))
+
             # cho vao db ...
+            time.sleep(0.05)
 
             # test
             # phai co try, nếu insert trung
@@ -84,6 +95,10 @@ def process():
             # except:
             #     pass
             # ci+=1
+
+            # lấy thời gian thực thi
+            end_time = time.time()
+            logger.write("Thời gian xử lý: %.2f" % (end_time-start_time))
 
             # sleep for cpu
             time.sleep(3.5)
