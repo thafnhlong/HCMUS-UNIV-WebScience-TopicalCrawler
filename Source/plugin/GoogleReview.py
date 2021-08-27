@@ -69,7 +69,6 @@ def init():
         score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
         address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
         addressDetail = driver.find_element_by_class_name("LrzXr").text
-
         phone = ""
         try:
             phone = driver.find_element_by_class_name("kno-fv").find_element_by_tag_name('a span').text
@@ -99,7 +98,6 @@ def init():
 
         danhGiaGg = driver.find_element_by_class_name("hqzQac").find_element_by_tag_name('span a span').text
         
-        
         print("title", title)
         print("fullTittle", fullTittle)
         print("price", price)
@@ -112,17 +110,47 @@ def init():
         print("danhGia", danhGiaGg)
         print("tableActive", tableActive)
 
-        print('==============')
         
         #Handle info from page
         #field change: website_id_quan, rate, phone, rate_count, price_from, price_to, other_service, tableActive
+        website_id_quan_change = "GoogleRV_"+str(hash(addressDetail))
+        website_change = "Google Review"
+        list_district = addressDetail.split(",")
+        district_change = ""
+        if len(list_district) > 0:
+            for district_element in list_district:
+                element = district_element.lower()
+                if element.find("quận") > 0:
+                    district_change = element.replace("quận", "").replace(" ", "")
+
+        tableActive_change = []
+        if len(tableActive) > 0:
+            tableActive_change = tableActive.split("\n")
+
         phone_change = phone.replace(" ", "")
         rate_change = float(str(score.replace(",", "."))) * 2
         rate_count_change = danhGiaGg.split(" ")[0]
-
-        print("phone_change", phone_change)
-        print("rate_change", rate_change)
-        print("rate_count_change", rate_count_change)
         
         print('==============')
         #field no change: website, url
+        price_from = 0
+        price_to = 0
+        if len(price) > 0:
+            if len(price) == 1:
+                price_to = 20
+                price_from = 100
+            if len(price) == 2:
+                price_to = 100
+                price_from = 300
+            if len(price) > 2:
+                price_to = 200
+                price_from = 1000
+
+        array_service = []
+        if len(other_service) > 0:
+            array_service = other_service.split("·")
+
+        #field no change: website, url
+        url_change = url_page
+        fullName_change = fullTittle
+        print("---------------------------------")
