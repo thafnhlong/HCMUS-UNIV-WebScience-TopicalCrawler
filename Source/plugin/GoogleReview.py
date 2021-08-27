@@ -67,7 +67,6 @@ def init():
         score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
         address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
         addressDetail = driver.find_element_by_class_name("LrzXr").text
-        website = url
         phone = ""
         try:
             phone = driver.find_element_by_class_name("kno-fv").find_element_by_tag_name('a span').text
@@ -175,15 +174,3 @@ def init():
         url_change = url_page
         fullName_change = fullTittle
         print("---------------------------------")
-        
-        #Handle info from page
-        #field change: website_id_quan, rate, phone, rate_count, price_from, price_to, other_service, tableActive
-        phone_change = phone.replace(" ", "")
-        rate_change = float(str(score.replace(",", "."))) * 2
-        rate_count_change = danhGiaGg.split(" ")[0]
-
-        print("phone_change", phone_change)
-        print("rate_change", rate_change)
-        print("rate_count_change", rate_count_change)
-        
-        #field no change: website, url
