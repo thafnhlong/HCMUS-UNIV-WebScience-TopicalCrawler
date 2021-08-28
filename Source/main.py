@@ -1,6 +1,7 @@
 import plugin.Foody as Foody
 import plugin.ShopeeFood as ShopeeFood
 import plugin.GoogleReview as GoogleReview
+import utils.metric as Monitor
 import utils.database
 import time
 from utils.signal import IsDoneAllThread, SetExit
@@ -47,6 +48,7 @@ def menu():
     print()
     print("Chon website cần crawler:")
     input_website()
+    Monitor.start()
     while True:
         print("Nhập bất kỳ để tiếp tục chọn website khác")
         print("Nhập exit để thoát chương trình")

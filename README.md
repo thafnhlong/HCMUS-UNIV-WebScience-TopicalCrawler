@@ -22,6 +22,8 @@
 
 - File cấu hình môi trường:
     > /config/env.py
+    - python_launcher: cài đặt theo môi trường (python, python3)
+    - external_log: quyết định có mở console để theo dõi log hay không
 
 - Chạy chương trình:
     ```
