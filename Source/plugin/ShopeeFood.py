@@ -37,23 +37,23 @@ def init():
     else:
         print("Đang tiến hành crawl data của tất cả chủ đề")
 
-    start()
+    start(chude)
 
 # khởi tạo luồng mới bắt buộc đặt tên thread, và không trùng
 num = 1
-def start():
+def start(chude):
     global num
     # create thread
 
     nameTH = "ShopeeFood %s"%num
-    t1 = threading.Thread(target=process, name=nameTH)
+    t1 = threading.Thread(target=process, name=nameTH,args=(chude))
     t1.setDaemon(True)
     t1.start()
 
     num += 1
 
 # luồng hoạt động chính
-def process():
+def process(chude):
     # tạo logger
     logger = create_log()
     name = threading.current_thread().name
@@ -63,27 +63,39 @@ def process():
 
     try: 
         # bat buoc nam trong block try except
+       
+        # trang i = 0
 
-        # fake:
-        # ci=1
         while True:
             # kiểm tra xem có tín hiệu thoát từ main
             if IsExit():
                 break
             
-            # lấy data crawler ...
             start_time = time.time()
+
+            # lay noi dung trang i
             logger.write("Lấy data...")
-            
-            # lấy data
+
+            # i++
+            # goi ham lay noi dung trang
+
+            # tach ra các item trong trang
             time.sleep(0.1)
 
-            # xử lý data
+            # lap tung item
+                # lay noi dung 
+
             time.sleep(0.3)
             AddMetric(len("đây là nội dung đã xử lý"))
 
-            # cho vao db ...
+                # insert DB
+
             time.sleep(0.05)
+
+                # lap
+
+            # lấy data crawler ...
+
 
             # test
             # phai co try, nếu insert trung
@@ -102,10 +114,7 @@ def process():
 
             # sleep for cpu
             time.sleep(3.5)
-            
-        # test
-        # print(get_bai_viet())
-    
+                
     except Exception as e:
         logger.write("Stop! "+str(e))
 
