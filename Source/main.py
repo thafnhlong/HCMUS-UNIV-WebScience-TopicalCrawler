@@ -6,7 +6,6 @@ import utils.database
 import time
 from utils.signal import IsDoneAllThread, SetExit
 
-
 def clean():
     utils.database.close_connection()
 
