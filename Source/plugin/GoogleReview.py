@@ -1,5 +1,7 @@
 import threading
 import time
+import json
+import traceback
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -90,7 +92,6 @@ def process(chude):
             driver.get(url)
             time.sleep(2)
 
-            # input 
             login = driver.find_element_by_xpath("//input").send_keys(chude)
             driver.find_element_by_xpath("//input").send_keys(Keys.ENTER)
             time.sleep(2)
@@ -103,15 +104,20 @@ def process(chude):
             while isNextPage:
                 #get all item
                 listItem = driver.find_elements_by_class_name("VkpGBb")
+                print(0)
+                print(listItem)
                 for item in listItem:
                     #Get link item
                     tag_current = item.find_element_by_tag_name('a')
+                    print(tag_current)
+                    print(0.2)
                     tag_current.click()
                     time.sleep(3)
                     url_page = driver.current_url
 
                     #Get info detail
                     title = item.find_element_by_class_name("dbg0pd").find_element_by_tag_name('div').text
+                    print('title', title)
                     fullTittle = driver.find_element_by_class_name("SPZz6b").find_element_by_tag_name('h2 span').text
                     score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
                     address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
@@ -159,7 +165,6 @@ def process(chude):
                         pass
                 
 
-                    print("title", title)
                     print("fullTittle", fullTittle)
                     print("price", price)
                     print("other_service", other_service)
@@ -176,6 +181,7 @@ def process(chude):
                     website_id_quan_change = "GoogleRV_"+str(hash(addressDetail))
                     website_change = "Google Review"
                     list_district = addressDetail.split(",")
+                    phone_change = phone.replace(" ", "")
                     district_change = ""
                     if len(list_district) > 0:
                         for district_element in list_district:
@@ -187,14 +193,17 @@ def process(chude):
                     if len(tableActive) > 0:
                         tableActive_change = tableActive.split("\n")
 
-                    phone_change = phone.replace(" ", "")
-                    score_convert= str(score.replace(",", ".").replace("Quảng cáo·", ""))
                     if score != "":
-                        rate_change = float() * 2
-                        rate_count_change = danhGiaGg.split(" ")[0]
+                        temp = str(score.replace(",", ".").replace("Quảng cáo·", ""))
+                        if temp != "":
+                            rate_change = float(temp) * 2
+                            rate_count_change = float(danhGiaGg.split(" ")[0])
+                        else :
+                            rate_change = 0
+                            rate_count_change = 0
                     else :
-                        rate_change= ""
-                        rate_count_change = ""
+                        rate_change= 0
+                        rate_count_change = 0
                     
                     print('==============')
                     #field no change: website, url
@@ -223,12 +232,48 @@ def process(chude):
 
                     # lap tung item
                     # lay noi dung 
+                    objectData ={
+                        "website_id_quan": website_id_quan_change,
+                        "website": website_change,
+                        "url": url_change,
+                        "district": district_change,
+                        "rate": rate_change,
+                        "active_time": {
+                            "monday": "06:00-22:00",
+                            "tuesday": "06:00-22:00"
+                        },
+                        "full_name": fullName_change,
+                        "phone": phone,
+                        "rate_count": rate_count_change,
+                        "price_from": price_from,
+                        "price_to": price_to,
+                        "other_service": json.dumps(array_service)
+                    }
 
                     # insert DB
+                    try:
+                        add_bai_viet(
+                            active_time=objectData["active_time"],
+                            district=objectData["district"],
+                            full_name=objectData["full_name"],
+                            phone=objectData["phone"],
+                            price_from=objectData["price_from"],
+                            price_to=objectData["price_to"],
+                            rate=objectData["rate"],
+                            rate_count=objectData["rate_count"],
+                            url=objectData["url"],
+                            website=objectData["website"],
+                            website_id_quan= objectData["website_id_quan"],
+                            other_service= objectData["other_service"]
+                        )
+                    except Exception:
+                        logger.write(traceback.format_exc()) # only debugging
+                        # duplicate or any error
+                        pass
 
                     time.sleep(0.05)
-                    logger.write("Thời gian xử lý: %.2f" % (end_time-start_time))
                     print("---------------------------------")
+                    AddMetric(len(json.dumps(objectData)))
 
                 #click next page
                 exist = check_exists_button_next(driver)
@@ -237,12 +282,13 @@ def process(chude):
                     time.sleep(1)
                 else :
                     isNextPage = False
+                logger.write("Thời gian xử lý: %.2f" % (end_time-start_time))
             
             # tach ra các item trong trang
             # time.sleep(0.1)
 
-            # # lap tung item
-            #     # lay noi dung 
+            # lap tung item
+            # lay noi dung 
 
             time.sleep(0.3)
             AddMetric(len("đây là nội dung đã xử lý"))
