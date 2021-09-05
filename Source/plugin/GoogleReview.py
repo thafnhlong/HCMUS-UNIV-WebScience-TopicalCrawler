@@ -238,12 +238,12 @@ def process(chude):
                         "url": url_change,
                         "district": district_change,
                         "rate": rate_change,
-                        "active_time": {
+                        "active_time": json.dumps({
                             "monday": "06:00-22:00",
                             "tuesday": "06:00-22:00"
-                        },
+                        }),
                         "full_name": fullName_change,
-                        "phone": phone,
+                        "phone": phone_change,
                         "rate_count": rate_count_change,
                         "price_from": price_from,
                         "price_to": price_to,
@@ -321,6 +321,7 @@ def process(chude):
             time.sleep(3.5)
                 
     except Exception as e:
+        logger.write(traceback.format_exc())
         logger.write("Stop! "+str(e))
 
     logger.close()
