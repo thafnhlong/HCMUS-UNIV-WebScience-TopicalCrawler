@@ -1114,14 +1114,14 @@
     </div>
         <ul class="recent-view-res-list">
                 <li class="recent-view-res" style="position:relative">
-                    <a href="/ha-noi/thit-bo-kho-khoai-lang-ken-pate-shop-online" target="_blank">
-                        <img class="rvr-avatar" src="https://images.foody.vn/res/g28/270219/prof/s128x80/foody-mobile-12-jpg-616-636078234143926775.jpg">
-                        <span class="rvr-name" style="width:345px">Thịt Bò Khô, Khoai Lang Kén &amp; Pate - Shop Online</span>
-                        <div class="rvr-address" style="width:345px">Ngõ 200 Âu Cơ, Quận Tây Hồ, Hà Nội</div>
+                    <a href="/ha-noi/che-buoi-thach-gang-hoang-ngoc-phach" target="_blank">
+                        <img class="rvr-avatar" src="https://images.foody.vn/res/g92/910994/prof/s128x80/foody-upload-api-foody-mobile-avar7-190502102424.jpg">
+                        <span class="rvr-name" style="width:345px">Chè Bưởi &amp; Thạch Găng - Hoàng Ngọc Phách</span>
+                        <div class="rvr-address" style="width:345px">Ngõ 1 Hoàng Ngọc Phách, Quận Đống Đa, Hà Nội</div>
 
-                                <div class="suggest-opentime">
-                                    <span class="suggest-online"></span>
-                                    <span class="suggest-opentime-text">Đang mở cửa</span>
+                                <div class="suggest-opentime" style="color:#959595">
+                                    <span class="suggest-offline"></span>
+                                    <span class="suggest-opentime-text">Chưa mở cửa</span>
 
                                 </div>
                     </a>
@@ -1414,7 +1414,7 @@
 
         <div class="language-dropdown-list" style="display: none;">
             
-                <a onclick="return changeLanguage('en')" rel="nofollow" href="/__get/common/changelanguage?code=en&amp;returnUrl=http%3A%2F%2Fwww.foody.vn%2Fha-noi%2Fthit-bo-kho-khoai-lang-ken-pate-shop-online%2Falbum-professional" title="en">
+                <a onclick="return changeLanguage('en')" rel="nofollow" href="/__get/common/changelanguage?code=en&amp;returnUrl=http%3A%2F%2Fwww.foody.vn%2Fha-noi%2Fche-buoi-thach-gang-hoang-ngoc-phach" title="en">
                     <img src="/style/images/icons/lang/us.png" alt="en" title="en" style="float:left;"> 
                     <span style="float:left; line-height:21px; padding-left:4px;font-size:12px; font-weight:normal; text-transform:uppercase;">en</span>
                 </a>
@@ -1839,6 +1839,24 @@
             </li><!-- end ngRepeat: item in ListItems.Items --><li ng-repeat="item in ListItems.Items" class="ng-scope">
                 <!-- ngIf: item.brand && item.brand.restaurant_count>1 -->
                 <!-- ngIf: !(item.brand && item.brand.restaurant_count>1) --><div ng-if="!(item.brand &amp;&amp; item.brand.restaurant_count>1)" class="ng-scope">
+                    <a class="avatar" title="Royaltea - Trà Sữa Đóng Chai - Dương Đình Nghệ" ng-href="https://shopeefood.vn/ha-noi/royaltea-tra-sua-dong-chai-duong-dinh-nghe" target="_blank" href="https://shopeefood.vn/ha-noi/royaltea-tra-sua-dong-chai-duong-dinh-nghe">
+                        <img ng-src="https://images.foody.vn/res/g110/1094208/prof/s750x400/foody-upload-api-foody-mobile-co-141f2655-210813085436.jpeg" alt="Royaltea - Trà Sữa Đóng Chai - Dương Đình Nghệ" src="https://images.foody.vn/res/g110/1094208/prof/s750x400/foody-upload-api-foody-mobile-co-141f2655-210813085436.jpeg">
+                    </a>
+                    <a title="Royaltea - Trà Sữa Đóng Chai - Dương Đình Nghệ" ng-href="https://shopeefood.vn/ha-noi/royaltea-tra-sua-dong-chai-duong-dinh-nghe" target="_blank" rel="nofollow" href="https://shopeefood.vn/ha-noi/royaltea-tra-sua-dong-chai-duong-dinh-nghe">
+                        <div class="name limit-text">
+                            <span ng-show="item.is_quality_merchant" class="quality-merchant ng-hide" title="Đây là một trong những địa điểm được đánh giá tốt nhất trên hệ thống ShopeeFood"></span>
+                            <span ng-bind="item.name" class="none-quality-text ng-binding" ng-class="{'quality-merchant-text':item.is_quality_merchant}" title="Royaltea - Trà Sữa Đóng Chai - Dương Đình Nghệ">Royaltea - Trà Sữa Đóng Chai - Dương Đình Nghệ</span>
+                        </div>
+                        <div class="address limit-text ng-binding" ng-bind="item.address" title="6 Dương Đình Nghệ (Đối Diện Star Tower), P. Yên Hoà, Cầu Giấy, Hà Nội">6 Dương Đình Nghệ (Đối Diện Star Tower), P. Yên Hoà, Cầu Giấy, Hà Nội</div>
+                    </a>
+                </div><!-- end ngIf: !(item.brand && item.brand.restaurant_count>1) -->
+                <div class="info limit-text" ng-class="{'highlight':item.promotion_title}">
+                    <i class="fa fa-tag ng-hide" style="color: red; font-weight: 900; display: inline-block;padding-right: 5px;" ng-show="item.promotion_title"></i>
+                    <label ng-bind-html="BindCategoriesPython(item)" class="ng-binding">Shop/Stores</label>
+                </div>
+            </li><!-- end ngRepeat: item in ListItems.Items --><li ng-repeat="item in ListItems.Items" class="ng-scope">
+                <!-- ngIf: item.brand && item.brand.restaurant_count>1 -->
+                <!-- ngIf: !(item.brand && item.brand.restaurant_count>1) --><div ng-if="!(item.brand &amp;&amp; item.brand.restaurant_count>1)" class="ng-scope">
                     <a class="avatar" title="Xoài Shop - Đặc Sản Vùng Miền" ng-href="https://shopeefood.vn/ha-noi/xoai-shop-dac-san-vung-mien" target="_blank" href="https://shopeefood.vn/ha-noi/xoai-shop-dac-san-vung-mien">
                         <img ng-src="https://images.foody.vn/res/g110/1099019/prof/s750x400/foody-upload-api-foody-mobile-ma-47bf72c0-210828160230.jpeg" alt="Xoài Shop - Đặc Sản Vùng Miền" src="https://images.foody.vn/res/g110/1099019/prof/s750x400/foody-upload-api-foody-mobile-ma-47bf72c0-210828160230.jpeg">
                     </a>
@@ -1903,24 +1921,6 @@
                             <span ng-bind="item.name" class="none-quality-text ng-binding" ng-class="{'quality-merchant-text':item.is_quality_merchant}" title="Cloud Farm - Thực Phẩm Sạch Nhập Khẩu - Hồ Tùng Mậu">Cloud Farm - Thực Phẩm Sạch Nhập Khẩu - Hồ Tùng Mậu</span>
                         </div>
                         <div class="address limit-text ng-binding" ng-bind="item.address" title="Toà R1, Goldmark City, 136 Hồ Tùng Mậu, Cầu Giấy, Hà Nội">Toà R1, Goldmark City, 136 Hồ Tùng Mậu, Cầu Giấy, Hà Nội</div>
-                    </a>
-                </div><!-- end ngIf: !(item.brand && item.brand.restaurant_count>1) -->
-                <div class="info limit-text" ng-class="{'highlight':item.promotion_title}">
-                    <i class="fa fa-tag ng-hide" style="color: red; font-weight: 900; display: inline-block;padding-right: 5px;" ng-show="item.promotion_title"></i>
-                    <label ng-bind-html="BindCategoriesPython(item)" class="ng-binding">Shop/Stores</label>
-                </div>
-            </li><!-- end ngRepeat: item in ListItems.Items --><li ng-repeat="item in ListItems.Items" class="ng-scope">
-                <!-- ngIf: item.brand && item.brand.restaurant_count>1 -->
-                <!-- ngIf: !(item.brand && item.brand.restaurant_count>1) --><div ng-if="!(item.brand &amp;&amp; item.brand.restaurant_count>1)" class="ng-scope">
-                    <a class="avatar" title="Nguyên Food - Thực Phẩm Đông Lạnh" ng-href="https://shopeefood.vn/ha-noi/nguyen-food-thuc-pham-dong-lanh" target="_blank" href="https://shopeefood.vn/ha-noi/nguyen-food-thuc-pham-dong-lanh">
-                        <img ng-src="https://images.foody.vn/res/g104/1039923/prof/s750x400/foody-upload-api-foody-mobile-41-200803162633.jpg" alt="Nguyên Food - Thực Phẩm Đông Lạnh" src="https://images.foody.vn/res/g104/1039923/prof/s750x400/foody-upload-api-foody-mobile-41-200803162633.jpg">
-                    </a>
-                    <a title="Nguyên Food - Thực Phẩm Đông Lạnh" ng-href="https://shopeefood.vn/ha-noi/nguyen-food-thuc-pham-dong-lanh" target="_blank" rel="nofollow" href="https://shopeefood.vn/ha-noi/nguyen-food-thuc-pham-dong-lanh">
-                        <div class="name limit-text">
-                            <span ng-show="item.is_quality_merchant" class="quality-merchant ng-hide" title="Đây là một trong những địa điểm được đánh giá tốt nhất trên hệ thống ShopeeFood"></span>
-                            <span ng-bind="item.name" class="none-quality-text ng-binding" ng-class="{'quality-merchant-text':item.is_quality_merchant}" title="Nguyên Food - Thực Phẩm Đông Lạnh">Nguyên Food - Thực Phẩm Đông Lạnh</span>
-                        </div>
-                        <div class="address limit-text ng-binding" ng-bind="item.address" title="182 Phúc Tân, Hoàn Kiếm, Hà Nội">182 Phúc Tân, Hoàn Kiếm, Hà Nội</div>
                     </a>
                 </div><!-- end ngIf: !(item.brand && item.brand.restaurant_count>1) -->
                 <div class="info limit-text" ng-class="{'highlight':item.promotion_title}">
@@ -2156,11 +2156,11 @@
     <!-- ngIf: Items.length>0 && Type!=6 --><div class="content-container fd-clearbox ng-scope" ng-if="Items.length>0 &amp;&amp; Type!=6" style="">
         <!-- ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
             <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/pizza-ong-tay-nguyen-van-tuyet" ng-href="https://shopeefood.vn/ha-noi/pizza-ong-tay-nguyen-van-tuyet" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g102/1012100/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200309155059.jpg" ng-src="https://images.foody.vn/res/g102/1012100/prof/s640x400/foody-upload-api-foody-mobile-foody-upload-api-foo-200309155059.jpg" style="background: rgb(0, 0, 0);">
+                <a href="https://shopeefood.vn/ha-noi/cuong-nghi-chuyen-gia-cay" ng-href="https://shopeefood.vn/ha-noi/cuong-nghi-chuyen-gia-cay" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g66/654155/prof/s640x400/foody-mobile-1-jpg-814-636288250883004289.jpg" ng-src="https://images.foody.vn/res/g66/654155/prof/s640x400/foody-mobile-1-jpg-814-636288250883004289.jpg">
                 </a>
                 <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/pizza-ong-tay-nguyen-van-tuyet" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/cuong-nghi-chuyen-gia-cay" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
                         <div class="logo"></div>
                         <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
                         <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
@@ -2172,34 +2172,36 @@
             </div>
             <div class="items-content hide-points">
                 <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">8.8</span>
+                    <span class="ng-binding">8.6</span>
                 </div>
                 <div class="title fd-text-ellip">
-                    <a href="/ha-noi/pizza-ong-tay-nguyen-van-tuyet" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Pizza Ông Tây - Nguyễn Văn Tuyết</a>
+                    <a href="/ha-noi/cuong-nghi-chuyen-gia-cay" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Cường Nghị - Chuyên Giả Cầy</a>
                 </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">26 Nguyễn Văn Tuyết, Quận Đống Đa, Hà Nội</div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">35 Gia Ngư, Quận Hoàn Kiếm, Hà Nội</div>
             </div>
             <!-- ngIf: item.LstReview.length<1 -->
             <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
                 <div class="avatar">
-                    <a href="/thanh-vien/foodee_hidwhgat" ng-href="/thanh-vien/foodee_hidwhgat" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/default/s100/user-default-female.png" src="https://images.foody.vn/default/s100/user-default-female.png">
+                    <a href="/thanh-vien/dccuong.vc" ng-href="/thanh-vien/dccuong.vc" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g55/547007/avt/c100x100/beauty-upload-api-foody-avatar-a3d50d4d-2178-4923-b182-4c5359e16f09-190909095514.jpg" src="https://images.foody.vn/usr/g55/547007/avt/c100x100/beauty-upload-api-foody-avatar-a3d50d4d-2178-4923-b182-4c5359e16f09-190909095514.jpg">
                     </a>
                 </div>
                 <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/foodee_hidwhgat" target="_blank" href="/thanh-vien/foodee_hidwhgat">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Tran Ha</b>
+                    <a ng-href="/thanh-vien/dccuong.vc" target="_blank" href="/thanh-vien/dccuong.vc">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Voi còi</b>
                     </a>
-                    <a ng-href="/ha-noi/pizza-ong-tay-nguyen-van-tuyet/binh-luan-4676526" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/pizza-ong-tay-nguyen-van-tuyet/binh-luan-4676526">Giao hàng nhanh, pizza khá đầy đặn và chất lượng so với giá. Chỉ là hơi mặn xíu, bớt mặn sẽ ngon hơn</a>
+                    <a ng-href="/ha-noi/cuong-nghi-chuyen-gia-cay/binh-luan-1861243" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/cuong-nghi-chuyen-gia-cay/binh-luan-1861243">Quán làm món giả cầy rất ngon, vị mắm tôm thoang thoảng, hợp để giới thiệu với bạn bè nước ngoài chưa quen
+Có món cua bể hầm bí xanh cũng rất ổn và lạ, nhưng cần gọi điện đặt trước 2-4 tiếng
+Điểm trừ ...</a>
 
                 </div>
             </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
 
             <div class="items-count">
                 <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">1</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">1</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">10</span></a>
                 
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="1012100">
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="654155">
                     <i class="fa fa-bookmark"></i>
                     <span ng-show="!item.IsSaved">Lưu</span>
                     <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
@@ -2207,11 +2209,360 @@
             </div>
         </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
             <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/com-rang-ngo-trang-tien" ng-href="https://shopeefood.vn/ha-noi/com-rang-ngo-trang-tien" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g9/88765/prof/s640x400/foody-mobile-com-rang-ngo-trang-t-844-635811281610352229.jpg" ng-src="https://images.foody.vn/res/g9/88765/prof/s640x400/foody-mobile-com-rang-ngo-trang-t-844-635811281610352229.jpg">
+                <a href="https://shopeefood.vn/ha-noi/gimbab-han-quoc-ngoc-khanh" ng-href="https://shopeefood.vn/ha-noi/gimbab-han-quoc-ngoc-khanh" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g1/9298/prof/s640x400/foody-mobile-3-jpg-831-635857700342239766.jpg" ng-src="https://images.foody.vn/res/g1/9298/prof/s640x400/foody-mobile-3-jpg-831-635857700342239766.jpg">
                 </a>
                 <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/com-rang-ngo-trang-tien" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/gimbab-han-quoc-ngoc-khanh" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                        <div class="logo"></div>
+                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
+                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
+                    </a><!-- end ngIf: item.IsDelivery -->
+                    
+                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">6.7</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/gimbab-han-quoc-ngoc-khanh" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Gimbab Hàn Quốc - Ngọc Khánh</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">52 Ngọc Khánh, Quận Ba Đình, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/nguynthngchn" ng-href="/thanh-vien/nguynthngchn" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g83/827026/avt/c100x100/nguynthngchn-avatar-131-637198035571998788.jpg" src="https://images.foody.vn/usr/g83/827026/avt/c100x100/nguynthngchn-avatar-131-637198035571998788.jpg">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/nguynthngchn" target="_blank" href="/thanh-vien/nguynthngchn">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">JN Foodie</b>
+                    </a>
+                    <a ng-href="/ha-noi/gimbab-han-quoc-ngoc-khanh/binh-luan-7659788" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/gimbab-han-quoc-ngoc-khanh/binh-luan-7659788">[GÓC KHEN NHƯNG VẪN CHÊ &gt;.&lt;]
+Quán GIM BAB HÀN QUỐC đã từng là chân ái trong lòng JN 
+___
+#JNinHaNoi
+#JNinHaNoi_food
+.
+👉Fanpage: JN Foodie (JN.Foodie)
+👉Instagram: @JN.Foodie
+___
+Hồi trước JN hay ăn ở ...</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">243</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">924</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="9298">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="https://shopeefood.vn/ha-noi/gimbap-han-quoc-tay-son" ng-href="https://shopeefood.vn/ha-noi/gimbap-han-quoc-tay-son" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g15/141972/prof/s640x400/foody-mobile-gimbab-han-quoc-jpg-947-635872862990791331.jpg" ng-src="https://images.foody.vn/res/g15/141972/prof/s640x400/foody-mobile-gimbab-han-quoc-jpg-947-635872862990791331.jpg">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/gimbap-han-quoc-tay-son" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                        <div class="logo"></div>
+                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
+                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
+                    </a><!-- end ngIf: item.IsDelivery -->
+                    
+                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">6.1</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/gimbap-han-quoc-tay-son" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Gimbap Hàn Quốc - Tây Sơn</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">222 Tây Sơn, Quận Đống Đa, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/nhatvihzt" ng-href="/thanh-vien/nhatvihzt" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g96/951615/avt/c100x100/nhatvihzt-avatar-297-636884061321138076.jpg" src="https://images.foody.vn/usr/g96/951615/avt/c100x100/nhatvihzt-avatar-297-636884061321138076.jpg">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/nhatvihzt" target="_blank" href="/thanh-vien/nhatvihzt">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Vi Trần</b>
+                    </a>
+                    <a ng-href="/ha-noi/gimbap-han-quoc-tay-son/binh-luan-2073917" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/gimbap-han-quoc-tay-son/binh-luan-2073917">Mình và bạn đi ăn lúc trưa, có gọi hai bát mỳ tương đen, lúc bê ra vẫn sôi sùng sục. Mì có trứng thái sợ, hành, dưa chuột và thịt. Có mấy món ăn kèm như dưa chuột muối ớt, củ cải vàng và gì nữa ý, không ...</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">17</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">144</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="141972">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="https://shopeefood.vn/ha-noi/banh-sinh-nhat-thao-my-shop-online-my-dinh" ng-href="https://shopeefood.vn/ha-noi/banh-sinh-nhat-thao-my-shop-online-my-dinh" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g101/1003267/prof/s640x400/file_restaurant_photo_bsrs_16042-abd54f3f-201101144927.jpeg" ng-src="https://images.foody.vn/res/g101/1003267/prof/s640x400/file_restaurant_photo_bsrs_16042-abd54f3f-201101144927.jpeg" style="background: rgb(0, 0, 0);">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/banh-sinh-nhat-thao-my-shop-online-my-dinh" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                        <div class="logo"></div>
+                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
+                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
+                    </a><!-- end ngIf: item.IsDelivery -->
+                    
+                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">1.0</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/banh-sinh-nhat-thao-my-shop-online-my-dinh" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Bánh Sinh Nhật Thảo My - Shop Online</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">Ngõ 52 Số Nhà 8 Mỹ Đình, Quận Nam Từ Liêm, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/foodee_qzaeiorp" ng-href="/thanh-vien/foodee_qzaeiorp" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g1399/13980438/avt/c100x100/foodee_qzaeiorp-avatar-232-637441034585235545.jpg" src="https://images.foody.vn/usr/g1399/13980438/avt/c100x100/foodee_qzaeiorp-avatar-232-637441034585235545.jpg">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/foodee_qzaeiorp" target="_blank" href="/thanh-vien/foodee_qzaeiorp">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Mỹ Linh Đào</b>
+                    </a>
+                    <a ng-href="/ha-noi/banh-sinh-nhat-thao-my-shop-online-my-dinh/binh-luan-10212165" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/banh-sinh-nhat-thao-my-shop-online-my-dinh/binh-luan-10212165">Chuyện là mình có đặt mua bánh bên này, sau khi nghe bạn review bảo không nên vì trc bạn mình đến thì tủ bánh đựng bánh su kem và các bánh khác bên ngoài đầy ruồi thì mình muốn huỷ :) Và tiệm bánh rất ...</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">1</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">0</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="1003267">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="https://shopeefood.vn/ha-noi/cu-loc-quan-bun-dau-online" ng-href="https://shopeefood.vn/ha-noi/cu-loc-quan-bun-dau-online" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g98/974798/prof/s640x400/foody-upload-api-foody-mobile-72330358_13587435112-191030171923.jpg" ng-src="https://images.foody.vn/res/g98/974798/prof/s640x400/foody-upload-api-foody-mobile-72330358_13587435112-191030171923.jpg" style="background: rgb(0, 0, 0);">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/cu-loc-quan-bun-dau-online" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                        <div class="logo"></div>
+                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
+                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
+                    </a><!-- end ngIf: item.IsDelivery -->
+                    
+                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">9.6</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/cu-loc-quan-bun-dau-online" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Cự Lộc Quán - Bún Đậu Online</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">4 ngõ 95 Cự Lộc, Quận Thanh Xuân, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/huynnhitrnth" ng-href="/thanh-vien/huynnhitrnth" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g1864/18637539/avt/c100x100/foody-avatar-744-637191531571822203.jpg" src="https://images.foody.vn/usr/g1864/18637539/avt/c100x100/foody-avatar-744-637191531571822203.jpg">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/huynnhitrnth" target="_blank" href="/thanh-vien/huynnhitrnth">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Huyền Nhi Trần Thị</b>
+                    </a>
+                    <a ng-href="/ha-noi/cu-loc-quan-bun-dau-online/binh-luan-8322779" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/cu-loc-quan-bun-dau-online/binh-luan-8322779">Quán này ngon nhất mình từng ăn, quán được mệnh danh là quán có tâm nhất luôn vì khách hàng ăn bún thỏa thuê, 1 phần mà bún nhiều như phần 2 người ở những nơi khác giá lại còn rẻ nữa chứ</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">38</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">23</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="974798">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="/ha-noi/tam-loc-bia-mon-nhau" ng-href="/ha-noi/tam-loc-bia-mon-nhau" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g2/13821/prof/s640x400/foody-mobile-tamloc-jpg-554-636155767895965748.jpg" ng-src="https://images.foody.vn/res/g2/13821/prof/s640x400/foody-mobile-tamloc-jpg-554-636155767895965748.jpg" style="background: rgb(172, 148, 116);">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">7.3</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/tam-loc-bia-mon-nhau" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Tam Lộc - Bia &amp; Món Nhậu</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">118 Nguyễn Khánh Toàn, Quận Cầu Giấy, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/chanhmu" ng-href="/thanh-vien/chanhmu" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g84/839820/avt/c100x100/beauty-upload-api-foody-avatar-76a09a99-f73b-40e7-9e91-b27aea36ea4b-190423234619.jpg" src="https://images.foody.vn/usr/g84/839820/avt/c100x100/beauty-upload-api-foody-avatar-76a09a99-f73b-40e7-9e91-b27aea36ea4b-190423234619.jpg">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/chanhmu" target="_blank" href="/thanh-vien/chanhmu">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">My Tra Tran</b>
+                    </a>
+                    <a ng-href="/ha-noi/tam-loc-bia-mon-nhau/binh-luan-1144859" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/tam-loc-bia-mon-nhau/binh-luan-1144859">Quán nằm to đẹp hoành tráng ngay phía đầu ngõ nên dễ nhận lắm. 
+
+Mình đã ăn ở đây khá nhiều lần và thấy là quán ko hề chất lượng lèo tèo như nhiều quán bia khác. 
+
+Trước tiên mình hay ăn cái giò 7 phút. ...</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">2</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">41</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="13821">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="/ha-noi/banh-trung-thu-binh-chung" ng-href="/ha-noi/banh-trung-thu-binh-chung" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g91/906426/prof/s640x400/foody-upload-api-foody-mobile-banh1-190525105911.jpg" ng-src="https://images.foody.vn/res/g91/906426/prof/s640x400/foody-upload-api-foody-mobile-banh1-190525105911.jpg" style="background: rgb(0, 0, 0);">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">8.3</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/banh-trung-thu-binh-chung" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Bánh Trung Thu Bình Chung</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">103 Xuân Đỉnh, Quận Bắc Từ Liêm, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/alderbaby" ng-href="/thanh-vien/alderbaby" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g831/8308826/avt/c100x100/beauty-upload-api-foody-avatar-1812dd4e-2ec8-44c3-9134-186596594f6e-191025233711.jpg" src="https://images.foody.vn/usr/g831/8308826/avt/c100x100/beauty-upload-api-foody-avatar-1812dd4e-2ec8-44c3-9134-186596594f6e-191025233711.jpg">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/alderbaby" target="_blank" href="/thanh-vien/alderbaby">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Anh Vũ An</b>
+                    </a>
+                    <a ng-href="/ha-noi/banh-trung-thu-binh-chung/binh-luan-3007610" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/banh-trung-thu-binh-chung/binh-luan-3007610">Khuyến khích mọi người nên mua để sử dụng trong dịp này. Hầu hết toàn là bánh mới, độ ngọt vừa đủ, trẻ nhà mình rất thích nữa.</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">2</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">5</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="906426">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="/ha-noi/banh-mi-nhu-lan-my-dinh" ng-href="/ha-noi/banh-mi-nhu-lan-my-dinh" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g14/134019/prof/s640x400/foody-mobile-7-jpg-507-635671264031028381.jpg" ng-src="https://images.foody.vn/res/g14/134019/prof/s640x400/foody-mobile-7-jpg-507-635671264031028381.jpg" style="background: rgb(194, 170, 120);">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.IsBooking || item.IsDelivery -->
+                <!-- ngIf: item.HasVideo -->
+            </div>
+            <div class="items-content hide-points">
+                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                    <span class="ng-binding">8.4</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/banh-mi-nhu-lan-my-dinh" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Bánh Mì Như Lan - Mỹ Đình</a>
+                </div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">58 Mỹ Đình, Quận Nam Từ Liêm, Hà Nội</div>
+            </div>
+            <!-- ngIf: item.LstReview.length<1 -->
+            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
+                <div class="avatar">
+                    <a href="/thanh-vien/tientung2903" ng-href="/thanh-vien/tientung2903" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/default/s100/user-default-male.png" src="https://images.foody.vn/default/s100/user-default-male.png">
+                    </a>
+                </div>
+                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
+                    <a ng-href="/thanh-vien/tientung2903" target="_blank" href="/thanh-vien/tientung2903">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Phạm Tiến Tùng</b>
+                    </a>
+                    <a ng-href="/ha-noi/banh-mi-nhu-lan-my-dinh/binh-luan-2285148" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/banh-mi-nhu-lan-my-dinh/binh-luan-2285148">Nhà mình ko có bán trên foody mà dám mạo danh chụp ảnh cửa hàng đưa lên bán bánh</a>
+
+                </div>
+            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
+
+            <div class="items-count">
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">2</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">5</span></a>
+                
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="134019">
+                    <i class="fa fa-bookmark"></i>
+                    <span ng-show="!item.IsSaved">Lưu</span>
+                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
+                </a>
+            </div>
+        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
+            <div class="avatar">
+                <a href="https://shopeefood.vn/ha-noi/don-chicken-chicken-pub-royal-city" ng-href="https://shopeefood.vn/ha-noi/don-chicken-chicken-pub-royal-city" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g69/689834/prof/s640x400/foody-upload-api-foody-mobile-anh3-190620095518.jpg" ng-src="https://images.foody.vn/res/g69/689834/prof/s640x400/foody-upload-api-foody-mobile-anh3-190620095518.jpg" style="background: rgb(0, 0, 0);">
+                </a>
+                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/don-chicken-chicken-pub-royal-city" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
                         <div class="logo"></div>
                         <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
                         <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
@@ -2225,241 +2576,34 @@
             </div>
             <div class="items-content hide-points">
                 <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">6.2</span>
+                    <span class="ng-binding">7.3</span>
                 </div>
                 <div class="title fd-text-ellip">
-                    <a href="/ha-noi/com-rang-ngo-trang-tien" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Cơm Rang Ngõ Tràng Tiền</a>
+                    <a href="/ha-noi/don-chicken-chicken-pub-royal-city" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Don Chicken - Chicken &amp; Pub - Royal City</a>
                 </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">8 Ngõ Tràng Tiền, Quận Hoàn Kiếm, Hà Nội</div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">B2 R3 - 10 Royal City, 72A Nguyễn Trãi, Quận Thanh Xuân, Hà Nội</div>
             </div>
             <!-- ngIf: item.LstReview.length<1 -->
             <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
                 <div class="avatar">
-                    <a href="/thanh-vien/foodee_zy0s6gup" ng-href="/thanh-vien/foodee_zy0s6gup" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g1791/17905188/avt/c100x100/beauty-upload-api-foody-avatar-b072f72a-fb57-46c7-9c24-c829c8b64db8-191030183944.jpg" src="https://images.foody.vn/usr/g1791/17905188/avt/c100x100/beauty-upload-api-foody-avatar-b072f72a-fb57-46c7-9c24-c829c8b64db8-191030183944.jpg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/foodee_zy0s6gup" target="_blank" href="/thanh-vien/foodee_zy0s6gup">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Lộc Đỗ</b>
-                    </a>
-                    <a ng-href="/ha-noi/com-rang-ngo-trang-tien/binh-luan-5051792" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/com-rang-ngo-trang-tien/binh-luan-5051792">hôm nay e có đặt được 1 suất cơm rang dưa bò mà rất là ngon cho đến khi thấy con gián chỉ còn 1 nửa cái đầu , em k biết đây là đặc sản hay như nào nhưng anh chị nào ăn ở đây thì móc họng là vừa . Quán ...</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">48</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">147</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="88765">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/tra-sua-sharetea-dao-tan" ng-href="https://shopeefood.vn/ha-noi/tra-sua-sharetea-dao-tan" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g91/901227/prof/s640x400/foody-upload-api-foody-mobile-avar37-190409114216.jpg" ng-src="https://images.foody.vn/res/g91/901227/prof/s640x400/foody-upload-api-foody-mobile-avar37-190409114216.jpg" style="background: rgb(0, 0, 0);">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/tra-sua-sharetea-dao-tan" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
-                        <div class="logo"></div>
-                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
-                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
-                    </a><!-- end ngIf: item.IsDelivery -->
-                    
-                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">6.0</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/tra-sua-sharetea-dao-tan" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Trà Sữa Sharetea - Đào Tấn</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">47 Đào Tấn, Quận Ba Đình, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/LexieJen" ng-href="/thanh-vien/LexieJen" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g19/180728/avt/c100x100/beauty-upload-api-foody-avatar-e7b8f0ab-5197-42a2-983f-7e0338a18d0b-191024205246.jpg" src="https://images.foody.vn/usr/g19/180728/avt/c100x100/beauty-upload-api-foody-avatar-e7b8f0ab-5197-42a2-983f-7e0338a18d0b-191024205246.jpg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/LexieJen" target="_blank" href="/thanh-vien/LexieJen">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Lexie Cao</b>
-                    </a>
-                    <a ng-href="/ha-noi/tra-sua-sharetea-dao-tan/binh-luan-11422287" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/tra-sua-sharetea-dao-tan/binh-luan-11422287">Kem sữa vị bột bột uống rất ghê. Trân châu cả 6 cốc cốc nào cũng nát. Cả cốc trà sữa rất khó uống. Vị không liên quan.</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">25</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">57</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="901227">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/era-quan-ga-chien-mam-lau-thai-tomyum" ng-href="https://shopeefood.vn/ha-noi/era-quan-ga-chien-mam-lau-thai-tomyum" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g100/999536/prof/s640x400/foody-upload-api-foody-mobile-190-201007142707.jpg" ng-src="https://images.foody.vn/res/g100/999536/prof/s640x400/foody-upload-api-foody-mobile-190-201007142707.jpg" style="background: rgb(0, 0, 0);">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/era-quan-ga-chien-mam-lau-thai-tomyum" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
-                        <div class="logo"></div>
-                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
-                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
-                    </a><!-- end ngIf: item.IsDelivery -->
-                    
-                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">9.9</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/era-quan-ga-chien-mam-lau-thai-tomyum" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Era Quán - Gà Chiên Mắm &amp; Lẩu Thái Tomyum</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">48 Mã Mây, Quận Hoàn Kiếm, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/foodee_fp6lomwm" ng-href="/thanh-vien/foodee_fp6lomwm" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g2249/22483414/avt/c100x100/foody-avatar-e64178e7-4e81-4e5c--38c47129-201204183310.jpeg" src="https://images.foody.vn/usr/g2249/22483414/avt/c100x100/foody-avatar-e64178e7-4e81-4e5c--38c47129-201204183310.jpeg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/foodee_fp6lomwm" target="_blank" href="/thanh-vien/foodee_fp6lomwm">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Tran Lukas</b>
-                    </a>
-                    <a ng-href="/ha-noi/era-quan-ga-chien-mam-lau-thai-tomyum/binh-luan-9863283" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/era-quan-ga-chien-mam-lau-thai-tomyum/binh-luan-9863283">Địa điểm thường xuyên của vk ck tớ. ăn ngon, ngồi siêu sạch sẽ, lịch sự. Giá cả quá hợp lý.</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">21</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">31</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="999536">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/vu-bao-am-thuc-viet-nam" ng-href="https://shopeefood.vn/ha-noi/vu-bao-am-thuc-viet-nam" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g91/908384/prof/s640x400/foody-upload-api-foody-mobile-vux-baro-190422145658.jpg" ng-src="https://images.foody.vn/res/g91/908384/prof/s640x400/foody-upload-api-foody-mobile-vux-baro-190422145658.jpg">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/vu-bao-am-thuc-viet-nam" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
-                        <div class="logo"></div>
-                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
-                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
-                    </a><!-- end ngIf: item.IsDelivery -->
-                    
-                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">7.6</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/vu-bao-am-thuc-viet-nam" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Vũ Bảo - Ẩm Thực Việt Nam - Trần Thái Tông</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">BT 14 Ngõ 75 Trần Thái Tông, Quận Cầu Giấy, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/Chi2k" ng-href="/thanh-vien/Chi2k" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g1158/11579565/avt/c100x100/chi2k-avatar-159-637309618490498502.jpg" src="https://images.foody.vn/usr/g1158/11579565/avt/c100x100/chi2k-avatar-159-637309618490498502.jpg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/Chi2k" target="_blank" href="/thanh-vien/Chi2k">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Quỳnhchi Nguyễn</b>
-                    </a>
-                    <a ng-href="/ha-noi/vu-bao-am-thuc-viet-nam/binh-luan-13649951" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/vu-bao-am-thuc-viet-nam/binh-luan-13649951">Gỏi nhệch siêu ngon🥰 Trong set nhà mình ăn là có nhệch, rau cuốn sẵn, đồ ăn kèm như hành, sả,  rau tía tô, lá sung,...
-chấm ăn cùng vs mắm tôm vs chẻo khá ngon. 
-Mình thấy chẻo thơm, đặc 
-Rau quán cũng ...</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">2</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">27</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="908384">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/super-chicken-tiem-ga-online" ng-href="https://shopeefood.vn/ha-noi/super-chicken-tiem-ga-online" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g89/888018/prof/s640x400/foody-upload-api-foody-mobile-chicken-190301101710.jpg" ng-src="https://images.foody.vn/res/g89/888018/prof/s640x400/foody-upload-api-foody-mobile-chicken-190301101710.jpg">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/super-chicken-tiem-ga-online" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
-                        <div class="logo"></div>
-                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
-                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
-                    </a><!-- end ngIf: item.IsDelivery -->
-                    
-                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">8.4</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/super-chicken-tiem-ga-online" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Super Chicken - Tiệm Gà Online</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">Ngõ 25 Vũ Ngọc Phan, Quận Đống Đa, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/Chi2k" ng-href="/thanh-vien/Chi2k" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g1158/11579565/avt/c100x100/chi2k-avatar-159-637309618490498502.jpg" src="https://images.foody.vn/usr/g1158/11579565/avt/c100x100/chi2k-avatar-159-637309618490498502.jpg">
+                    <a href="/thanh-vien/foodee_e91eigzk" ng-href="/thanh-vien/foodee_e91eigzk" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g2047/20460826/avt/c100x100/foodee_e91eigzk-avatar-323-637551305088935931.jpg" src="https://images.foody.vn/usr/g2047/20460826/avt/c100x100/foodee_e91eigzk-avatar-323-637551305088935931.jpg">
                     </a>
                 </div>
                 <div class="users-content block-with-text not-align" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/Chi2k" target="_blank" href="/thanh-vien/Chi2k">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Quỳnhchi Nguyễn</b>
+                    <a ng-href="/thanh-vien/foodee_e91eigzk" target="_blank" href="/thanh-vien/foodee_e91eigzk">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Hanh Nguyen Nguyen</b>
                     </a>
-                    <a ng-href="/ha-noi/super-chicken-tiem-ga-online/binh-luan-13649949" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/super-chicken-tiem-ga-online/binh-luan-13649949">Trộm vía vẫn ăn được lúc này😝 Thèm là phải mần mò ngay chân gà nhà chị í😋&nbsp; &nbsp; </a>
+                    <a ng-href="/ha-noi/don-chicken-chicken-pub-royal-city/binh-luan-12398373" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/don-chicken-chicken-pub-royal-city/binh-luan-12398373">Ngonn, khoai ngọt, gà cay nhiều hơn ngọt nhưng vẫn ngon&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
 
                 </div>
             </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
 
             <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">17</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">53</span></a>
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">68</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">228</span></a>
                 
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="888018">
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="689834">
                     <i class="fa fa-bookmark"></i>
                     <span ng-show="!item.IsSaved">Lưu</span>
                     <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
@@ -2467,11 +2611,11 @@ Rau quán cũng ...</a>
             </div>
         </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
             <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/tiger-sugar-duong-nau-sua-dai-loan-thai-phien" ng-href="https://shopeefood.vn/ha-noi/tiger-sugar-duong-nau-sua-dai-loan-thai-phien" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g79/787959/prof/s640x400/foody-upload-api-foody-mobile-img_7714-191202170203.jpg" ng-src="https://images.foody.vn/res/g79/787959/prof/s640x400/foody-upload-api-foody-mobile-img_7714-191202170203.jpg" style="background: rgb(0, 0, 0);">
+                <a href="https://shopeefood.vn/ha-noi/donchicken-ha-noi-do-an-nhanh-han-quoc" ng-href="https://shopeefood.vn/ha-noi/donchicken-ha-noi-do-an-nhanh-han-quoc" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g29/285307/prof/s640x400/foody-upload-api-foody-mobile-anh3-190620095500.jpg" ng-src="https://images.foody.vn/res/g29/285307/prof/s640x400/foody-upload-api-foody-mobile-anh3-190620095500.jpg" style="background: rgb(0, 0, 0);">
                 </a>
                 <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/tiger-sugar-duong-nau-sua-dai-loan-thai-phien" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/donchicken-ha-noi-do-an-nhanh-han-quoc" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
                         <div class="logo"></div>
                         <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
                         <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
@@ -2486,31 +2630,32 @@ Rau quán cũng ...</a>
                     <span class="ng-binding">7.5</span>
                 </div>
                 <div class="title fd-text-ellip">
-                    <a href="/ha-noi/tiger-sugar-duong-nau-sua-dai-loan-thai-phien" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Tiger Sugar Delivery - Đường Nâu Sữa Đài Loan - Thái Phiên</a>
+                    <a href="/ha-noi/donchicken-ha-noi-do-an-nhanh-han-quoc" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Don Chicken - Chicken &amp; Pub - Hàng Bông</a>
                 </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">5 Thái Phiên, Quận Hai Bà Trưng, Hà Nội</div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">250 Hàng Bông, P. Cửa Nam, Quận Hoàn Kiếm, Hà Nội</div>
             </div>
             <!-- ngIf: item.LstReview.length<1 -->
             <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
                 <div class="avatar">
-                    <a href="/thanh-vien/quyksieukiu" ng-href="/thanh-vien/quyksieukiu" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g146/1455167/avt/c100x100/beauty-upload-api-foody-avatar-3b335c94-ec6b-4147-9a38-b6c985079ee6-200420151908.jpg" src="https://images.foody.vn/usr/g146/1455167/avt/c100x100/beauty-upload-api-foody-avatar-3b335c94-ec6b-4147-9a38-b6c985079ee6-200420151908.jpg">
+                    <a href="/thanh-vien/vtg91229" ng-href="/thanh-vien/vtg91229" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g1013/10120978/avt/c100x100/vtg91229-avatar-505-637069233211427079.jpg" src="https://images.foody.vn/usr/g1013/10120978/avt/c100x100/vtg91229-avatar-505-637069233211427079.jpg">
                     </a>
                 </div>
                 <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/quyksieukiu" target="_blank" href="/thanh-vien/quyksieukiu">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Thu Quỳnh</b>
+                    <a ng-href="/thanh-vien/vtg91229" target="_blank" href="/thanh-vien/vtg91229">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Giang Vũ</b>
                     </a>
-                    <a ng-href="/ha-noi/tiger-sugar-duong-nau-sua-dai-loan-thai-phien/binh-luan-12785767" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/tiger-sugar-duong-nau-sua-dai-loan-thai-phien/binh-luan-12785767">Mình đặt trà xoài kem cheese, mà ko có kem cheese luôn. Trong khi kem cheese là thêm tận 12k. Vị thì ko khác gì nước lọc vị xoài :D Trời nóng lại còn thêm bực. Dỗi thật sự :)</a>
+                    <a ng-href="/ha-noi/donchicken-ha-noi-do-an-nhanh-han-quoc/binh-luan-6422910" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/donchicken-ha-noi-do-an-nhanh-han-quoc/binh-luan-6422910">Khoai tây chiên mật ong là món best ở Don luôn á 🤤🤤🤤 sợi khoai tây thơm phức mùi mật ong, bên ngoài giòn, bên trong mềm thơm. 
+Gà nướng mật ong cũng ngon, mà hơi bị cháy cháy chút 😢 gà mềm, thơm mùi ...</a>
 
                 </div>
             </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
 
             <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">104</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">201</span></a>
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">218</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">1.4k</span></a>
                 
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="787959">
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="285307">
                     <i class="fa fa-bookmark"></i>
                     <span ng-show="!item.IsSaved">Lưu</span>
                     <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
@@ -2518,11 +2663,11 @@ Rau quán cũng ...</a>
             </div>
         </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
             <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/han-cha-tra-sua" ng-href="https://shopeefood.vn/ha-noi/han-cha-tra-sua" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g105/1040523/prof/s640x400/file_restaurant_photo_cr52_16155-80050758-210313010025.jpeg" ng-src="https://images.foody.vn/res/g105/1040523/prof/s640x400/file_restaurant_photo_cr52_16155-80050758-210313010025.jpeg" style="background: rgb(0, 0, 0);">
+                <a href="https://shopeefood.vn/ha-noi/papas-chicken-embassy-garden" ng-href="https://shopeefood.vn/ha-noi/papas-chicken-embassy-garden" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g87/862442/prof/s640x400/foody-upload-api-foody-mobile-208-190403113142.jpg" ng-src="https://images.foody.vn/res/g87/862442/prof/s640x400/foody-upload-api-foody-mobile-208-190403113142.jpg">
                 </a>
                 <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/han-cha-tra-sua" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/papas-chicken-embassy-garden" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
                         <div class="logo"></div>
                         <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
                         <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
@@ -2534,129 +2679,35 @@ Rau quán cũng ...</a>
             </div>
             <div class="items-content hide-points">
                 <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">8.0</span>
+                    <span class="ng-binding">9.1</span>
                 </div>
                 <div class="title fd-text-ellip">
-                    <a href="/ha-noi/han-cha-tra-sua" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Han Cha - Trà Sữa</a>
+                    <a href="/ha-noi/papas-chicken-embassy-garden" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Papas' Chicken - Embassy Garden Ngoại Giao Đoàn</a>
                 </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">17 Ngõ 81 Linh Lang, P. Cống Vị, Quận Ba Đình, Hà Nội</div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">LK A04, Embassy Garden, KĐT Tây Hồ Tây, Xuân Tảo, Quận Bắc Từ Liêm, Hà Nội</div>
             </div>
             <!-- ngIf: item.LstReview.length<1 -->
             <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
                 <div class="avatar">
-                    <a href="/thanh-vien/mimi_cute_lovely" ng-href="/thanh-vien/mimi_cute_lovely" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g165/1647039/avt/c100x100/mimi_cute_lovely-avatar-502-637437153942959980.jpg" src="https://images.foody.vn/usr/g165/1647039/avt/c100x100/mimi_cute_lovely-avatar-502-637437153942959980.jpg">
+                    <a href="/thanh-vien/nhucuchn" ng-href="/thanh-vien/nhucuchn" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/default/s100/user-default-female.png" src="https://images.foody.vn/default/s100/user-default-female.png">
                     </a>
                 </div>
                 <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/mimi_cute_lovely" target="_blank" href="/thanh-vien/mimi_cute_lovely">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Han Hyo Mii</b>
+                    <a ng-href="/thanh-vien/nhucuchn" target="_blank" href="/thanh-vien/nhucuchn">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Cuc Nhu</b>
                     </a>
-                    <a ng-href="/ha-noi/han-cha-tra-sua/binh-luan-7265294" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/han-cha-tra-sua/binh-luan-7265294">Mưa gió vẫn lặn lội đi thử món hót hòn họt này. Cốc của mình là việt quất phomai ăn kèm vs mấy que kia ngon dã man, vừa xinh vừa ngon miệng tnay kb, mỗi tội hơi lạnh :)))</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">1</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">3</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="1040523">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/dung-hanh-banh-mi-gio-cha" ng-href="https://shopeefood.vn/ha-noi/dung-hanh-banh-mi-gio-cha" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g19/180199/prof/s640x400/foody-upload-api-foody-mobile-avar11-190730094037.jpg" ng-src="https://images.foody.vn/res/g19/180199/prof/s640x400/foody-upload-api-foody-mobile-avar11-190730094037.jpg" style="background: rgb(0, 0, 0);">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/dung-hanh-banh-mi-gio-cha" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
-                        <div class="logo"></div>
-                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
-                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
-                    </a><!-- end ngIf: item.IsDelivery -->
-                    
-                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">6.5</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/dung-hanh-banh-mi-gio-cha" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Dũng Hạnh - Bánh Mì Giò Chả</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">20 Lê Đại Hành, P. Lê Đại Hành, Quận Hai Bà Trưng, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/starvnus" ng-href="/thanh-vien/starvnus" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/defaultavatar/s100/default-avatar-20130809-31.jpg" src="https://images.foody.vn/defaultavatar/s100/default-avatar-20130809-31.jpg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/starvnus" target="_blank" href="/thanh-vien/starvnus">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">OmegaH Star</b>
-                    </a>
-                    <a ng-href="/ha-noi/dung-hanh-banh-mi-gio-cha/binh-luan-13649925" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/dung-hanh-banh-mi-gio-cha/binh-luan-13649925">Hồi tết mua thử giò xào ở đây ăn được, nên tuần rồi đề phòng giãn cách mua 1kg về ăn dần mà chất lượng giảm tệ hại. Quán độn cả bì bò hay trâu vào ăn dai kinh khủng, đã thế phần bì chiếm tỉ lẹ nhiều, ...</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">37</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">117</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="180199">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="/ha-noi/tan-huong-lan" ng-href="/ha-noi/tan-huong-lan" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g1/7800/prof/s640x400/foody-mobile-tan-huong-lan-gio-cha.jpg" ng-src="https://images.foody.vn/res/g1/7800/prof/s640x400/foody-mobile-tan-huong-lan-gio-cha.jpg" style="background: rgb(164, 119, 113);">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">7.3</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/tan-huong-lan" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Tân Hương Lan - Giò Chả</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">166 Tây Sơn, Quận Đống Đa, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/quyettt0812" ng-href="/thanh-vien/quyettt0812" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g42/411405/avt/c100x100/foody-avatar-139-637264614357283579.jpg" src="https://images.foody.vn/usr/g42/411405/avt/c100x100/foody-avatar-139-637264614357283579.jpg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/quyettt0812" target="_blank" href="/thanh-vien/quyettt0812">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">quyettruong</b>
-                    </a>
-                    <a ng-href="/ha-noi/tan-huong-lan/binh-luan-175322" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/tan-huong-lan/binh-luan-175322">Mình rất thích bánh chưng, chả cá ở đây. Quán nay ngay cạnh Gò đống đa. Quán co thực đơn phong phú. Trong đó mình hay mua chả cá và giò. Các món giò chả sạch sẽ và ngon.</a>
+                    <a ng-href="/ha-noi/papas-chicken-embassy-garden/binh-luan-2571849" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/papas-chicken-embassy-garden/binh-luan-2571849">Rất ngon, chuẩn vị Hàn quốc 100%!!!!
+Quán dễ tìm lắm, nằm cạnh ngay mấy chung cư Ngoại Giao đoàn như N03T3, N03T5, nhà hàng thuê hẳn 1 nhà biệt thự, trang trí đẹp, rộng, thoáng, tầng 2 còn có khu ngồi ...</a>
 
                 </div>
             </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
 
             <div class="items-count">
                 <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">2</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">0</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">17</span></a>
                 
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="7800">
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="862442">
                     <i class="fa fa-bookmark"></i>
                     <span ng-show="!item.IsSaved">Lưu</span>
                     <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
@@ -2664,11 +2715,11 @@ Rau quán cũng ...</a>
             </div>
         </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
             <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/banh-su-kem-chewy-junior-dao-tan" ng-href="https://shopeefood.vn/ha-noi/banh-su-kem-chewy-junior-dao-tan" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g67/668164/prof/s640x400/foody-mobile--6358867219e05edee9b.jpg" ng-src="https://images.foody.vn/res/g67/668164/prof/s640x400/foody-mobile--6358867219e05edee9b.jpg">
+                <a href="https://shopeefood.vn/ha-noi/subi-sup-ga-ngo-luoc" ng-href="https://shopeefood.vn/ha-noi/subi-sup-ga-ngo-luoc" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g23/224577/prof/s640x400/foody-mobile-12734093_82221905457-423-635953749349584909.jpg" ng-src="https://images.foody.vn/res/g23/224577/prof/s640x400/foody-mobile-12734093_82221905457-423-635953749349584909.jpg">
                 </a>
                 <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/banh-su-kem-chewy-junior-dao-tan" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
+                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/subi-sup-ga-ngo-luoc" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
                         <div class="logo"></div>
                         <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
                         <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
@@ -2680,87 +2731,34 @@ Rau quán cũng ...</a>
             </div>
             <div class="items-content hide-points">
                 <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">7.4</span>
+                    <span class="ng-binding">7.2</span>
                 </div>
                 <div class="title fd-text-ellip">
-                    <a href="/ha-noi/banh-su-kem-chewy-junior-dao-tan" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Bánh Su Kem Singapore Chewy Junior - Đào Tấn</a>
+                    <a href="/ha-noi/subi-sup-ga-ngo-luoc" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Subi - Súp Gà &amp; Ngô Luộc</a>
                 </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">12 Đào Tấn, Quận Ba Đình, Hà Nội</div>
+                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">31 Ngõ 115 An Dương, Quận Tây Hồ, Hà Nội</div>
             </div>
             <!-- ngIf: item.LstReview.length<1 -->
             <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
                 <div class="avatar">
-                    <a href="/thanh-vien/nguyenthuyduong97" ng-href="/thanh-vien/nguyenthuyduong97" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g890/8895844/avt/c100x100/beauty-upload-api-foody-avatar-fa644a7d-25a3-449e-b14b-13dd6ef238c3-191218114526.jpg" src="https://images.foody.vn/usr/g890/8895844/avt/c100x100/beauty-upload-api-foody-avatar-fa644a7d-25a3-449e-b14b-13dd6ef238c3-191218114526.jpg">
+                    <a href="/thanh-vien/lynhbear96" ng-href="/thanh-vien/lynhbear96" target="_blank">
+                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g18/176408/avt/c100x100/lynhbear96-avatar-728-636619942328025511.jpg" src="https://images.foody.vn/usr/g18/176408/avt/c100x100/lynhbear96-avatar-728-636619942328025511.jpg">
                     </a>
                 </div>
                 <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/nguyenthuyduong97" target="_blank" href="/thanh-vien/nguyenthuyduong97">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">nguyenthuyduong97</b>
+                    <a ng-href="/thanh-vien/lynhbear96" target="_blank" href="/thanh-vien/lynhbear96">
+                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Khánh Linh</b>
                     </a>
-                    <a ng-href="/ha-noi/banh-su-kem-chewy-junior-dao-tan/binh-luan-7619114" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/banh-su-kem-chewy-junior-dao-tan/binh-luan-7619114">Mình hay mua ở cơ sở*** về chất lượng bánh thì rất ok nhưng thái độ của một bạn nữ nhân viên ở cơ sở***thì ko chấp nhận được. Sáng sớm ra bán cho khách hộp bánh cũ ko biết làm từ bao giờ nhân chua loét ...</a>
+                    <a ng-href="/ha-noi/subi-sup-ga-ngo-luoc/binh-luan-2537747" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/subi-sup-ga-ngo-luoc/binh-luan-2537747">Trời lạnh thèm súp nên mình gọi thử súp ở đây. Ship đến nơi súp vẫn còn nóng. Súp ở đây đặc mà nhân đầy đặn lắm nhé, khác hẳn các nơi khác mình từng ăn, mà giá quá rẻ, 15k 1 cốc mang về.</a>
 
                 </div>
             </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
 
             <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">63</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">300</span></a>
+                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">6</span></a>
+                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">16</span></a>
                 
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="668164">
-                    <i class="fa fa-bookmark"></i>
-                    <span ng-show="!item.IsSaved">Lưu</span>
-                    <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
-                </a>
-            </div>
-        </div><!-- end ngRepeat: item in Items --><div class="content-item ng-scope" ng-repeat="item in Items">
-            <div class="avatar">
-                <a href="https://shopeefood.vn/ha-noi/beard-papa-s-doi-can" ng-href="https://shopeefood.vn/ha-noi/beard-papa-s-doi-can" target="_blank" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
-                    <img ng-style="{'background':item.MobileBgColor}" onerror="this.onerror=null;this.src='/Style/images/deli-dish-no-image.png';" src="https://images.foody.vn/res/g71/702256/prof/s640x400/foody-upload-api-foody-mobile-avar3-jpg-181029145710.jpg" ng-src="https://images.foody.vn/res/g71/702256/prof/s640x400/foody-upload-api-foody-mobile-avar3-jpg-181029145710.jpg" style="background: rgb(0, 0, 0);">
-                </a>
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-btn-group ng-scope" ng-if="item.IsBooking || item.IsDelivery">
-                    <!-- ngIf: item.IsDelivery --><a class="deli-btn ng-scope deli" ng-if="item.IsDelivery" ng-class="{'deli':!item.IsBooking}" href="https://shopeefood.vn/ha-noi/beard-papa-s-doi-can" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" target="_blank">
-                        <div class="logo"></div>
-                        <!-- ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 --><div class="content ng-scope" ng-if="item.MasterCategoryId!=2&amp;&amp;item.MasterCategoryId!=3">Đặt Giao Hàng</div><!-- end ngIf: item.MasterCategoryId!=2&&item.MasterCategoryId!=3 -->
-                        <!-- ngIf: item.MasterCategoryId==2||item.MasterCategoryId==3 -->
-                    </a><!-- end ngIf: item.IsDelivery -->
-                    
-                </div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.IsBooking || item.IsDelivery --><div class="tabledeli-overlay ng-scope" ng-if="item.IsBooking || item.IsDelivery"></div><!-- end ngIf: item.IsBooking || item.IsDelivery -->
-                <!-- ngIf: item.HasVideo -->
-            </div>
-            <div class="items-content hide-points">
-                <div class="review-points green" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
-                    <span class="ng-binding">7.7</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/beard-papa-s-doi-can" ng-bind="item.Name" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" class="ng-binding">Beard Papa's - Đội Cấn</a>
-                </div>
-                <div class="desc fd-text-ellip ng-binding" ng-bind="item.Address">209 Đội Cấn, Quận Ba Đình, Hà Nội</div>
-            </div>
-            <!-- ngIf: item.LstReview.length<1 -->
-            <!-- ngRepeat: rv in item.LstReview | limitTo:1 --><div class="items-review ng-scope" ng-repeat="rv in item.LstReview | limitTo:1">
-                <div class="avatar">
-                    <a href="/thanh-vien/nguyenanhnha1408" ng-href="/thanh-vien/nguyenanhnha1408" target="_blank">
-                        <img onerror="this.onerror=null;this.src='/Style/images/no-avatar.png';" ng-src="https://images.foody.vn/usr/g88/875317/avt/c100x100/nguyenanhnha1408-avatar-503-636015762832988478.jpg" src="https://images.foody.vn/usr/g88/875317/avt/c100x100/nguyenanhnha1408-avatar-503-636015762832988478.jpg">
-                    </a>
-                </div>
-                <div class="users-content block-with-text" ng-class="{'not-align':rv.ShortReview}">
-                    <a ng-href="/thanh-vien/nguyenanhnha1408" target="_blank" href="/thanh-vien/nguyenanhnha1408">
-                        <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Bạch Tuyết</b>
-                    </a>
-                    <a ng-href="/ha-noi/beard-papa-s-doi-can/binh-luan-2535232" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/beard-papa-s-doi-can/binh-luan-2535232">- Trc đây Papa chỉ có CSo ở Royal City thôi, bâyh mở ra ở rất nhiều cơ sở. Mỗi nơi chỉ là 1 cái kiot nho nhỏ thoi nhưng fai công nận quy mô phát triển rất tốt ấy 😁
-
-- Đợt khai trương CS Đội Cấn này m ...</a>
-
-                </div>
-            </div><!-- end ngRepeat: rv in item.LstReview | limitTo:1 -->
-
-            <div class="items-count">
-                <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">20</span></a>
-                <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">89</span></a>
-                
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="702256">
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" ng-class="{'saved':item.IsSaved}" data-id="224577">
                     <i class="fa fa-bookmark"></i>
                     <span ng-show="!item.IsSaved">Lưu</span>
                     <span ng-show="item.IsSaved" class="ng-hide">Đã lưu</span>
