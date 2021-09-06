@@ -105,22 +105,20 @@ def process(chude):
                 #get all item
                 listItem = driver.find_elements_by_class_name("VkpGBb")
                 print(0)
-                print(listItem)
                 for item in listItem:
                     #Get link item
                     tag_current = item.find_element_by_tag_name('a')
                     print(tag_current)
-                    print(0.2)
                     tag_current.click()
                     time.sleep(3)
                     url_page = driver.current_url
 
                     #Get info detail
-                    title = item.find_element_by_class_name("dbg0pd").find_element_by_tag_name('div').text
-                    print('title', title)
+                    # title = item.find_element_by_class_name("dbg0pd").find_element_by_tag_name('div').text
+                    # print('title', title)
                     fullTittle = driver.find_element_by_class_name("SPZz6b").find_element_by_tag_name('h2 span').text
-                    score = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div span').text
-                    address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
+                    score = driver.find_element_by_class_name("Ob2kfd").find_element_by_tag_name('div span').text
+                    # address = item.find_element_by_class_name("rllt__details").find_element_by_tag_name('div:nth-child(2)').text
                     print(1)
                     addressDetail = driver.find_element_by_class_name("LrzXr").text
                     print(2)
@@ -142,7 +140,6 @@ def process(chude):
                     except NoSuchElementException: 
                         pass
 
-                    timeActive = ""
                     tableActive = ""
                     try:
                         active = driver.find_element_by_class_name("JjSWRd")
@@ -163,14 +160,12 @@ def process(chude):
                         other_service = driver.find_element_by_xpath("//c-wiz[@class='u1M3kd W2lMue']").find_element_by_tag_name('div').text
                     except NoSuchElementException: 
                         pass
-                
 
                     print("fullTittle", fullTittle)
                     print("price", price)
                     print("other_service", other_service)
 
                     print("score", score)
-                    print("address", address)
                     print("addressDetail", addressDetail)
                     print("phone", phone)
                     print("danhGia", danhGiaGg)
@@ -189,10 +184,21 @@ def process(chude):
                             if element.find("quận") > 0:
                                 district_change = element.replace("quận", "").replace(" ", "")
 
-                    tableActive_change = []
+                    list_active_change = []
                     if len(tableActive) > 0:
-                        tableActive_change = tableActive.split("\n")
+                        list_timeActive = []
+                        list_timeActive = tableActive.split("\n")
+                        for str_time in list_timeActive:
+                            temp_active = str_time.index(" ",4)
+                            day_active = str_time[:temp_active]
+                            time_active = str_time[temp_active + 1:]
 
+                            objectTimeActive = {
+                                day_active: time_active
+                            }
+                            list_active_change.append(objectTimeActive)
+
+                    print('list_active_change', list_active_change)
                     if score != "":
                         temp = str(score.replace(",", ".").replace("Quảng cáo·", ""))
                         if temp != "":
@@ -211,18 +217,19 @@ def process(chude):
                     price_to = 0
                     if len(price) > 0:
                         if len(price) == 1:
-                            price_to = 20
-                            price_from = 100
-                        if len(price) == 2:
+                            price_from = 20
                             price_to = 100
-                            price_from = 300
+                        if len(price) == 2:
+                            price_from = 100
+                            price_to = 300
                         if len(price) > 2:
-                            price_to = 200
-                            price_from = 1000
+                            price_from = 200
+                            price_to = 1000
 
                     array_service = []
                     if len(other_service) > 0:
                         array_service = other_service.split("·")
+                    print('array_service', array_service)
 
                     #field no change: website, url
                     url_change = url_page
@@ -238,22 +245,23 @@ def process(chude):
                         "url": url_change,
                         "district": district_change,
                         "rate": rate_change,
-                        "active_time": json.dumps({
-                            "monday": "06:00-22:00",
-                            "tuesday": "06:00-22:00"
-                        }),
+                        # "active_time": json.dumps({
+                        #     "monday": "06:00-22:00",
+                        #     "tuesday": "06:00-22:00"
+                        # }),
+                        "active_time": list_active_change,
                         "full_name": fullName_change,
                         "phone": phone_change,
                         "rate_count": rate_count_change,
                         "price_from": price_from,
                         "price_to": price_to,
-                        "other_service": json.dumps(array_service)
+                        "other_service": array_service
                     }
 
                     # insert DB
                     try:
                         add_bai_viet(
-                            active_time=objectData["active_time"],
+                            active_time=json.dumps(objectData["active_time"]),
                             district=objectData["district"],
                             full_name=objectData["full_name"],
                             phone=objectData["phone"],
@@ -264,7 +272,7 @@ def process(chude):
                             url=objectData["url"],
                             website=objectData["website"],
                             website_id_quan= objectData["website_id_quan"],
-                            other_service= objectData["other_service"]
+                            other_service= json.dumps(objectData["other_service"])
                         )
                     except Exception:
                         logger.write(traceback.format_exc()) # only debugging
