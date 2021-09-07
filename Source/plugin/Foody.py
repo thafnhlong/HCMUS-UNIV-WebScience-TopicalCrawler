@@ -336,6 +336,7 @@ def process(chude):
             #lay ra cua hang trang i
             logger.write("Xử lý các cửa hàng trên trang số %s..."%(pageindex))
 
+            isLast = False
             urlList = laydanhsachcuahangtieptheo(driver,isFirst)
             if urlList:
                 while len(urlList) > 0:
@@ -352,7 +353,6 @@ def process(chude):
                             # logger.write(traceback.format_exc()) # only debugging
                             # logger.write("Error by: %s"%url)
                             pass
-
                     else:
                         data = None
                         try:
@@ -385,11 +385,14 @@ def process(chude):
                                 # duplicate or any error
                                 pass
             else:
-                break
-            
+                isLast = True
+
             end_time = time.time()
             logger.write("Thời gian xử lý: %.2f" % (end_time-start_time))
 
+            if isLast:
+                break
+            
             pageindex+=1
             isFirst=False
 
