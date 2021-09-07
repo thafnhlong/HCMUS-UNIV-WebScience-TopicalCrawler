@@ -83,8 +83,8 @@ def laydanhsachcuahangtieptheo(driver: WebDriver, init=True):
     btnLoad = driver.find_element_by_id("scrollLoadingPage")
     statusesSpan = btnLoad.find_elements_by_tag_name("span")
 
-    currentSize = int(statusesSpan[0].get_attribute('innerText'))
-    totalSize = int(statusesSpan[1].get_attribute('innerText'))
+    currentSize = int(statusesSpan[0].get_attribute('innerText').replace(",",""))
+    totalSize = int(statusesSpan[1].get_attribute('innerText').replace(",",""))
 
     if currentSize>=totalSize:
         return None
